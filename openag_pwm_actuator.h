@@ -3,15 +3,12 @@
 
 #include "Arduino.h"
 #include <std_msgs/Float32.h>
+#include <openag_module.h>
 
-class PwmActuator {
+class PwmActuator : public Module {
   public:
     // Constructor
     PwmActuator(int pin, bool is_active_low, float threshold);
-
-    // Public variables
-    bool has_error;
-    char* error_msg;
 
     // Public functions
     void begin();
