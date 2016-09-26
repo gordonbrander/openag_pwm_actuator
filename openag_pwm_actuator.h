@@ -20,8 +20,6 @@ class PwmActuator : public Module {
     int _pin;
     bool _is_active_low;
     float _threshold;
-    uint32_t _last_cmd;
-    const static int _max_update_interval = 10000;
 };
 
 #endif
